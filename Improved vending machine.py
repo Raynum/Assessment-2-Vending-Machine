@@ -34,8 +34,10 @@ def moneyinput():  #handles all payment for the selected item in the vending mac
         change = money - price
         print(f'Please collect your change: ${change:.2f}')
         item['stock'] -= 1  #decrements stock by 1 after a successful transaction
+        print(f'Item Dispensed: {item["name"]}')  #message to show item is dispensed
     elif money < price:
         print("Invalid Amount")
+
 
 def main():  #runs the vending machine system excecuting all other functions as well
     print("Welcome to the VendingMachine")
